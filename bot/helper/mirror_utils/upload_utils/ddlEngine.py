@@ -12,7 +12,7 @@ from aiohttp.client_exceptions import ContentTypeError
 
 from bot import LOGGER, user_data
 from bot.helper.mirror_utils.upload_utils.ddlserver.gofile import Gofile
-from bot.helper.mirror_utils.upload_utils.ddlserver.streamtape import Streamtape
+# from bot.helper.mirror_utils.upload_utils.ddlserver.streamtape import Streamtape
 from bot.helper.ext_utils.fs_utils import get_mime_type
 
 
@@ -80,14 +80,14 @@ class DDLUploader:
                     self.__engine = 'GoFile API'
                     nlink = await Gofile(self, api_key).upload(file_path)
                     all_links['GoFile'] = nlink
-                if serv == 'streamtape':
-                    self.__engine = 'StreamTape API'
-                    try:
-                        login, key = api_key.split(':')
-                    except IndexError:
-                        raise Exception("StreamTape Login & Key not Found, Kindly Recheck !")
-                    nlink = await Streamtape(self, login, key).upload(file_path)
-                    all_links['StreamTape'] = nlink
+                # if serv == 'streamtape':
+                #     self.__engine = 'StreamTape API'
+                #     try:
+                #         login, key = api_key.split(':')
+                #     except IndexError:
+                #         raise Exception("StreamTape Login & Key not Found, Kindly Recheck !")
+                #     nlink = await Streamtape(self, login, key).upload(file_path)
+                #     all_links['StreamTape'] = nlink
                 self.__processed_bytes = 0
         if not all_links:
             raise Exception("No DDL Enabled to Upload.")
