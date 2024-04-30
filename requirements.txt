@@ -32,7 +32,7 @@ pycountry
 pymongo
 #pyrogram==2.0.77
 #pyrofork
-pyrofork==2.2.10
+pyrofork==2.2.11
 python-dotenv
 python-magic
 qbittorrent-api
