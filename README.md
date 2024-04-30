@@ -68,7 +68,6 @@
 
     - Upload Files/Folder in the Supported Sites
       - Gofile.io
-      - Streamtape.com
     - Upload on multiple sites at a time
     - User api/key is need for the upload        
     </details></li>
