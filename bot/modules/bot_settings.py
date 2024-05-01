@@ -141,10 +141,6 @@ async def load_config():
     if len(GDTOT_CRYPT) == 0:
         GDTOT_CRYPT = ''
         
-    JIODRIVE_TOKEN = environ.get('JIODRIVE_TOKEN', '')
-    if len(JIODRIVE_TOKEN) == 0:
-        JIODRIVE_TOKEN = ''
-        
     ALL_DEBRID_API = environ.get('ALL_DEBRID_API', '')
     if len(ALL_DEBRID_API) == 0:
         ALL_DEBRID_API = ''
